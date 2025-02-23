@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.3",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-router-dom": "^7.2.0",
+    "sequelize": "^6.37.5",
+    "vite": "^6.1.0"
+  }
+}
