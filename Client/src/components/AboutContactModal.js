@@ -13,12 +13,17 @@ const AboutContactModal = () => {
         About/Contact
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>About/Contact</Modal.Title>
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton style={{ backgroundColor: '#F5F7FA' }}>
+          <Modal.Title style={{ color: '#4A90E2', fontFamily: 'Roboto, sans-serif' }}>About/Contact</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <p>Contact Information: example@email.com</p>
+        <Modal.Body style={{ backgroundColor: '#FFFFFF', borderRadius: '0 0 8px 8px' }}>
+          <p style={{ color: '#333333', fontFamily: 'Roboto, sans-serif' }}>
+            A website helping people find their furrever friends!
+          </p>
+          <p style={{ color: '#4A90E2', fontFamily: 'Roboto, sans-serif' }}>
+            Contact Information: <a href="mailto:support@purrpals.com">support@purrpals.com</a>
+          </p>
         </Modal.Body>
       </Modal>
     </>
