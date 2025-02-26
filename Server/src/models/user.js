@@ -15,14 +15,24 @@ function UserFactory(sequelize) {
     {
       id: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
+        allowNull: false,
         primaryKey: true,
+        autoIncrement: true,
       },
-      username: {
+      firstName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      email: {
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      userName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      zipCode: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -32,9 +42,12 @@ function UserFactory(sequelize) {
       },
     },
     {
-      tableName: 'hr2',  // Name of the table in PostgreSQL
-      sequelize,            // The Sequelize instance that connects to PostgreSQL
-      hooks: {
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',            
+    hooks: {
         // Before creating a new user, hash and set the password
         beforeCreate: async (user) => {
           await user.setPassword(user.password);
@@ -46,8 +59,8 @@ function UserFactory(sequelize) {
           }
         },
       }
-    }
-  );
+    });
+  
 
   return User;  // Return the initialized User model
 }

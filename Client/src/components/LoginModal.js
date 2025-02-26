@@ -34,7 +34,32 @@ const LoginModal = () => {
     setError('');
     setSuccess('');
 
+    //updated for backend sql
     try {
+      let response;
+      const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+      if (isLogin) {
+        // Login endpoint
+        response = await axios.post(`${backendUrl}/api/users/login`, {
+          userName: formData.userName,
+          password: formData.password,
+        });
+        setSuccess('Logged in successfully!');
+      } else {
+        // Register endpoint
+        response = await axios.post(`${backendUrl}/api/users/register`, {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          userName: formData.userName,
+          zipCode: formData.zipCode,
+          password: formData.password,
+        });
+        setSuccess('Registered successfully! You can now log in.');
+      }
+//end of update
+
+/*     try {
       let response;
       if (isLogin) {
         // Login endpoint
@@ -53,7 +78,7 @@ const LoginModal = () => {
           password: formData.password,
         });
         setSuccess('Registered successfully! You can now log in.');
-      }
+      } */
 
       // Store authentication data in localStorage
       localStorage.setItem('token', response.data.token);
