@@ -19,6 +19,9 @@ export default defineConfig({
     outDir: 'build',
     rollupOptions: {
       input: './Client/public/index.html',
+      external: [
+        'bootstrap'
+      ]
     },
   },
   esbuild: {
