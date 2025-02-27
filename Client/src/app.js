@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
@@ -6,7 +6,7 @@ import PetOfDay from './components/PetOfDay';
 import FindAPal from './components/FindAPal';
 import BreedInfo from './components/BreedInfo';
 import SavedPets from './components/SavedPets';
-import Footer from './components/Footer';
+import Footer from './components/Footer'; */
 
 function App() {
   // return (
