@@ -6,6 +6,7 @@ import App from './app';
 // Load Google Fonts (Roboto)
 import './index.css'; 
 
-console.log("Hello from index.js");
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
 root.render(<App />);
