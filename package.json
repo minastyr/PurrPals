@@ -9,7 +9,7 @@
     "migrate": "npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "client": "vite",
-    "client:build": "vite build --config Client/vite.config.js",
+    "client:build": "vite build --config Client/vitel.config.js",
     "client:start": "vite preview",
     "server": "node server/server.js",
     "server:dev": "nodemon server/server.js",
