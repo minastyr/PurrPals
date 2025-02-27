@@ -8,7 +8,7 @@ import BreedInfo from './components/BreedInfo';
 import SavedPets from './components/SavedPets';
 import Footer from './components/Footer';
 
-function app() {
+function App() {
   return (
     <Router>
       <div className="App">
@@ -35,4 +35,4 @@ function app() {
 
 }
 
-export default app;
+export default App;
