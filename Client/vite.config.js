@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'build',
     rollupOptions: {
-      input: '../client/public/index.html',
+      input: 'public/index.html',
     },
   },
   plugins: [react()],
