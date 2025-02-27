@@ -27,6 +27,12 @@ function App() {
       </div>
     </Router>
   );
+/*   return (
+    <div>
+      <h1>Welcome to PurrPals</h1>
+    </div>
+  );
+ */
 }
 
 export default App;

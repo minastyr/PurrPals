@@ -2,24 +2,39 @@
   "name": "purrpals-server",
   "version": "1.0.0",
   "description": "Backend for PurrPals pet adoption site",
-  "main": "src/server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
     "migrate": "npx sequelize-cli db:migrate",
-    "seed": "npx sequelize-cli db:seed:all"
+    "seed": "npx sequelize-cli db:seed:all",
+    "client": "vite",
+    "client:build": "vite build --config Client/vite.config.js",
+    "client:start": "vite preview",
+    "server": "node server/server.js",
+    "server:dev": "nodemon server/server.js",
+    "build": "npm run client:build",
+    "start:all": "concurrently \"npm run server\" \"npm run client:start\"",
+    "dev:all": "concurrently \"npm run server:dev\" \"npm run client\""
   },
   "dependencies": {
-    "express": "^4.21.2",
-    "pg": "^8.13.3",
-    "sequelize": "^6.37.5",
-    "jsonwebtoken": "^9.0.2",
-    "bcrypt": "^5.1.1",
-    "dotenv": "^16.4.7",
+    "@vitejs/plugin-react": "^4.3.4",
     "axios": "^1.6.8",
-    "cors": "^2.8.5"
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.3",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0",
+    "sequelize": "^6.37.5",
+    "vite": "^6.2.0"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "nodemon": "^3.1.0",
     "sequelize-cli": "^6.6.2"
   }
