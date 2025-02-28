@@ -20,7 +20,7 @@ export default defineConfig({
     rollupOptions: {
       input: './Client/public/index.html',
       external: [
-        'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
+        'bootstrap'
       ]
     },
   },
